@@ -25,6 +25,7 @@ function Lex(string) {
 			lexed_array.push(temp);
 			temp = '';
 		}
+		prev = type_of(char);
 	}
 	if (temp)
 		lexed_array.push(temp);
