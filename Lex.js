@@ -14,7 +14,9 @@ function type_of(char) {
 
 function Lex(string) {
 	var prev = '';
-	for (char in string.split('')) {
+	var array = string.split('');
+	for (i in array) {
+		var char = array[i];
 		console.log(type_of(char)+': '+char);
 	}
 }
