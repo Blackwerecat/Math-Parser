@@ -3,7 +3,7 @@ function type_of(char) {
 		return 'int';
 	else if ('()'.includes(char))
 		return 'par';
-	else if ('.'.inclues(char))
+	else if ('.'.includes(char))
 		return 'dot';
 	else if ('+-*/'.includes(char))
 		return 'opr';
