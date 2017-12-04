@@ -22,8 +22,9 @@ function Lex(string) {
 		if (prev != 'par' && prev == type_of(char)) {
 			temp += char;
 		}else {
-			lexed_array.push(temp);
-			temp = '';
+			if (temp)
+				lexed_array.push(temp);
+			temp = char;
 		}
 		prev = type_of(char);
 	}
