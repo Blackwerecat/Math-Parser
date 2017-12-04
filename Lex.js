@@ -1,5 +1,5 @@
 function type_of(char) {
-	if (Number(char))
+	if (!isNaN(Number(char)))
 		return 'int';
 	else if ('()'.includes(char))
 		return 'par';
