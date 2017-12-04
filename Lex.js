@@ -15,8 +15,18 @@ function type_of(char) {
 function Lex(string) {
 	var prev = '';
 	var array = string.split('');
+	var lexed_array = [];
+	var temp = '';
 	for (i in array) {
 		var char = array[i];
-		console.log(type_of(char)+': '+char);
+		if (prev != 'par' && prev == type_of(char)) {
+			temp += char;
+		}else {
+			lexed_array.push(temp);
+			temp = '';
+		}
 	}
+	if (temp)
+		lexed_array.push(temp);
+	return lexed_array;
 }
